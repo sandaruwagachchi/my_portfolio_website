@@ -1,6 +1,9 @@
 import styles from './ProjectsStyles.module.css';
-import movie from '../../assets/assets/viberr.png';
-import hotel from '../../assets/assets/fresh-burger.png';
+import movie from '../../assets/assets/movie.webp';
+import netflix from '../../assets/assets/movie.webp';
+import news from '../../assets/assets/news.webp';
+import gemini from '../../assets/assets/gemini.webp';
+import hotel from '../../assets/assets/hotel.webp';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {
@@ -19,6 +22,24 @@ function Projects() {
           link="https://github.com/sandaruwagachchi/Hotel-Management-System"
           h3="Hotel Management System"
           p="Using C# Language"
+        />
+         <ProjectCard
+          src={netflix}
+          link="https://github.com/sandaruwagachchi/Netflix-Clone"
+          h3="Netflix Clone"
+          p="Using React JS and Firebase"
+        />
+         <ProjectCard
+          src={news}
+          link="https://github.com/sandaruwagachchi/news-website"
+          h3="SandaNews-360"
+          p="Using React JS"
+        />
+         <ProjectCard
+          src={gemini}
+          link="https://github.com/sandaruwagachchi/gemini-clone"
+          h3="Gemini Clone"
+          p="Using React JS"
         />
       </div>
     </section>
