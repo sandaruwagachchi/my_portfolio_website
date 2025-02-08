@@ -1,9 +1,9 @@
 import styles from './ProjectsStyles.module.css';
-import movie from '../../assets/assets/movie.webp';
-import netflix from '../../assets/assets/netflix.webp';
+import movie from '../../assets/assets/movie.jpg';
+import netflix from '../../assets/assets/netflix.jpg';
 import news from '../../assets/assets/news.webp';
 import gemini from '../../assets/assets/gemini.webp';
-import hotel from '../../assets/assets/hotel.webp';
+import hotel from '../../assets/assets/hotel.jpg';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {

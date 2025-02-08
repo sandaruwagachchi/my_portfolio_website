@@ -55,9 +55,9 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          I'm currently studying Diploma in Software Engineering at National
+          I'm currently studying Higher National Diploma in Software Engineering at National
           Institute of Business Management. <br />
-          (NIBM-SriLanka)
+          (NIBM-Sri Lanka)
         </p>
       </div>
     </section>
