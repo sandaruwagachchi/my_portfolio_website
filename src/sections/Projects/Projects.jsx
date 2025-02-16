@@ -46,7 +46,7 @@ function Projects() {
           src={iPhone}
           link="https://github.com/sandaruwagachchi/apple-clone"
           h3="Apple iPhone 15 Pro Website"
-          p="Using React JS, GSAP, Three JS"
+          p="Using React JS, GSAP and Three JS"
         />
       </div>
     </section>
