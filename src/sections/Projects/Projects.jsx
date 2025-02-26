@@ -6,6 +6,8 @@ import gemini from '../../assets/assets/gemini.webp';
 import hotel from '../../assets/assets/hotel.jpg';
 import ProjectCard from '../../common/ProjectCard';
 import iPhone from '../../assets/assets/iPhone.jpg';
+import game from '../../assets/assets/gaming.png';
+
 
 function Projects() {
   return (
@@ -47,6 +49,12 @@ function Projects() {
           link="https://github.com/sandaruwagachchi/apple-clone"
           h3="Apple iPhone 15 Pro Website"
           p="Using React JS, GSAP and Three JS"
+        />
+        <ProjectCard
+          src={game}
+          link="https://github.com/sandaruwagachchi/sandavortex-gaming-website"
+          h3="SandaVortex Gaming Website"
+          p="Using React JS, GSAP and Tailwind CSS"
         />
       </div>
     </section>
