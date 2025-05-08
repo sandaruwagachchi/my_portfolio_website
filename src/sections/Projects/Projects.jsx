@@ -7,7 +7,7 @@ import hotel from '../../assets/assets/hotel.jpg';
 import ProjectCard from '../../common/ProjectCard';
 import iPhone from '../../assets/assets/iPhone.jpg';
 import game from '../../assets/assets/gaming.png';
-import music from '../../assets/assets/SW-Music.png'
+import music from '../../assets/assets/music.png'
 
 
 function Projects() {
