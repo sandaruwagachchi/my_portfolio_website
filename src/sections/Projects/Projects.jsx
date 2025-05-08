@@ -59,7 +59,7 @@ function Projects() {
         />
          <ProjectCard
           src={music}
-          link="https://github.com/sandaruwagachchi/sandavortex-gaming-website"
+          link="https://github.com/sandaruwagachchi/sw-music.lk"
           h3="SW-Music.lk"
           p="Using React Native CLI and Supabase"
         />
