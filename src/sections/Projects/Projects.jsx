@@ -7,6 +7,7 @@ import hotel from '../../assets/assets/hotel.jpg';
 import ProjectCard from '../../common/ProjectCard';
 import iPhone from '../../assets/assets/iPhone.jpg';
 import game from '../../assets/assets/gaming.png';
+import music from '../../assets/assets/SW-Music.png'
 
 
 function Projects() {
@@ -55,6 +56,12 @@ function Projects() {
           link="https://github.com/sandaruwagachchi/sandavortex-gaming-website"
           h3="SandaVortex Gaming Website"
           p="Using React JS, GSAP and Tailwind CSS"
+        />
+         <ProjectCard
+          src={music}
+          link="https://github.com/sandaruwagachchi/sandavortex-gaming-website"
+          h3="SW-Music.lk"
+          p="Using React Native CLI and Supabase"
         />
       </div>
     </section>
