@@ -8,40 +8,6 @@
   min-height: 500px;
   animation: fadeIn 1s ease-out;
   position: relative;
-}
-
-.container::before {
-  content: '{ }';
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-size: 60px;
-  opacity: 0.1;
-  color: var(--text-color);
-  animation: pulse 3s ease-in-out infinite;
-}
-
-.container::after {
-  content: '</>';
-  position: absolute;
-  bottom: 20%;
-  right: 10%;
-  font-size: 60px;
-  opacity: 0.1;
-  color: var(--text-color);
-  animation: pulse 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.2;
-    transform: scale(1.1);
-  }
-}
 
   .hero {
     max-width: 200px;
@@ -81,6 +47,39 @@
   a {
     width: fit-content;
     align-self: center;
+  }
+}
+
+.container::before {
+  content: '{ }';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  opacity: 0.1;
+  color: var(--text-color);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.container::after {
+  content: '</>';
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  font-size: 60px;
+  opacity: 0.1;
+  color: var(--text-color);
+  animation: pulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1);
   }
 }
 
