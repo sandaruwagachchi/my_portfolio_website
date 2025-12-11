@@ -63,6 +63,24 @@ function Projects() {
           h3="SW-Music.lk"
           p="Using React Native CLI and Supabase"
         />
+        <ProjectCard
+          src={solor}
+          link="https://github.com/sandaruwagachchi/rayspire_solor_mobile_app"
+          h3="Rayspire Solor App"
+          p="Using Kotlin and Firebase"
+        />
+        <ProjectCard
+          src={bus}
+          link="https://github.com/Thenula09/PassengerApp"
+          h3="Highway Bus Tracking & Booking App"
+          p="Using React Native CLI and Firebase"
+        />
+        <ProjectCard
+          src={park}
+          link="https://github.com/sandaruwagachchi/smartparky_app"
+          h3="SmartParky App"
+          p="Using Flutter and Firebase"
+        />
       </div>
     </section>
   );
