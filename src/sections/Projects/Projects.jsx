@@ -7,7 +7,10 @@ import hotel from '../../assets/assets/hotel.jpg';
 import ProjectCard from '../../common/ProjectCard';
 import iPhone from '../../assets/assets/iPhone.jpg';
 import game from '../../assets/assets/gaming.png';
-import music from '../../assets/assets/music.png'
+import music from '../../assets/assets/music.png';
+import solor from '../../assets/assets/solor.jpg';
+import bus from '../../assets/assets/bus.jpg';
+import park from '../../assets/assets/park.jpg';
 
 
 function Projects() {

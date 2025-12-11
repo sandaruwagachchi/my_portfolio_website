@@ -1,17 +1,27 @@
 :root {
-  --background-color: #fff;
-  --project-card-bg: #ffffff00;
-  --text-color: #222;
+  --background-color: #f8f9fa;
+  --project-card-bg: #ffffff;
+  --text-color: #1a1a2e;
   --form-text-color: #555;
   --footer-text-color: #888;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --card-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+  --hover-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
 }
 
 [data-theme='dark'] {
-  --background-color: #222;
-  --project-card-bg: #fff;
-  --text-color: #fff;
-  --form-text-color: #fff;
+  --background-color: #0f0f1e;
+  --project-card-bg: #1a1a2e;
+  --text-color: #eaeaea;
+  --form-text-color: #ccc;
   --footer-text-color: #bbb;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --card-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  --hover-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
 }
 
 body {
@@ -19,6 +29,57 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto 60px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(79, 172, 254, 0.1) 0%, transparent 50%);
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
+
+body::after {
+  content: '⚡️ 💻 🚀 ⭐ 🎨 🔥 ✨ 🌟 💡 🎯';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+  animation: floatIcons 20s linear infinite;
+  word-spacing: 100px;
+  line-height: 150px;
+  overflow: hidden;
+}
+
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #root {
@@ -34,6 +95,7 @@ p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
 h2,
@@ -55,6 +117,25 @@ h3 {
 h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 32px;
+  animation: slideInScale 1s ease-out;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes slideInScale {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+  60% {
+    transform: translateY(5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 p {
@@ -64,6 +145,55 @@ p {
 
 .sectionTitle {
   margin-bottom: 30px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease-out;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  animation: expandLine 1s ease-out 0.5s forwards;
+  border-radius: 2px;
+}
+
+@keyframes expandLine {
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hover {

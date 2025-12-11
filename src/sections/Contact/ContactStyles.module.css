@@ -2,6 +2,46 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  animation: fadeIn 1s ease-out;
+  position: relative;
+}
+
+.container::before {
+  content: '📧';
+  position: absolute;
+  top: -10px;
+  left: 15%;
+  font-size: 45px;
+  opacity: 0.12;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.container::after {
+  content: '✉️';
+  position: absolute;
+  top: -10px;
+  right: 15%;
+  font-size: 45px;
+  opacity: 0.12;
+  animation: swing 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 form {
@@ -31,6 +71,18 @@ textarea {
   justify-self: center;
   background-color: var(--background-color);
   color: var(--form-text-color);
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
+              var(--primary-gradient) border-box;
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
 }
 
 ::placeholder {
@@ -38,26 +90,28 @@ textarea {
 }
 
 input[type='submit'] {
-  background-color: var(--form-text-color);
-  color: var(--btn-text-color);
+  background: var(--primary-gradient);
+  color: white;
   border: none;
   border-radius: 20px;
   width: 126px;
   height: 50px;
   font-size: 20px;
   font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
   margin: auto;
+  cursor: pointer;
 }
 
 input[type='submit']:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
 }
 
 input[type='submit']:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  transform: translateY(0px);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
 
 @media (width >=800px) {

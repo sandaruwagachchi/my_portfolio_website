@@ -2,15 +2,65 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+}
+
+.container::before {
+  content: '⚡';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  font-size: 50px;
+  opacity: 0.12;
+  animation: rotateFloat 4s ease-in-out infinite;
+}
+
+.container::after {
+  content: '🔧';
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: 50px;
+  opacity: 0.12;
+  animation: rotateFloat 4s ease-in-out infinite 2s;
+}
+
+@keyframes rotateFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
 
   span {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+
+  span:hover {
+    transform: translateY(-5px);
+    background: var(--accent-gradient);
+    box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
+  }
+
+  span:hover p {
+    color: white;
+    font-weight: 500;
   }
 
   img {
     width: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  span:hover img {
+    transform: rotate(360deg) scale(1.1);
   }
 }
 
@@ -21,13 +71,24 @@
   flex-wrap: wrap;
   row-gap: 40px;
   max-width: 26ch;
+  animation: fadeInUp 0.8s ease-out;
 }
 hr {
   width: 100px;
-  height: 1px;
+  height: 2px;
   border: none;
-  background-color: var(--text-color);
+  background: var(--primary-gradient);
   margin: 30px auto;
+  animation: expandWidth 1s ease-out;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
 }
 
 @media (width >=800px) {
@@ -42,5 +103,14 @@ hr {
 
   hr {
     width: 300px;
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 300px;
+    }
   }
 }
